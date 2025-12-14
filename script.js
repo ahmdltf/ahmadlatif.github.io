@@ -83,3 +83,72 @@ function typeWriter() {
 window.addEventListener('load', () => {
     setTimeout(typeWriter, 1000);
 });
+
+// Certification Carousel
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const indicators = document.querySelectorAll('.indicator');
+
+function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Show current slide
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+    
+    currentSlide = index;
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+    showSlide(index);
+}
+
+// Auto-play carousel
+let carouselInterval = setInterval(nextSlide, 4000);
+
+// Pause auto-play on hover
+const carouselContainer = document.querySelector('.carousel-container');
+if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(carouselInterval);
+    });
+    
+    carouselContainer.addEventListener('mouseleave', () => {
+        carouselInterval = setInterval(nextSlide, 4000);
+    });
+}
+
+// Initialize carousel
+if (slides.length > 0) {
+    showSlide(0);
+}
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}

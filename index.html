@@ -40,9 +40,13 @@
             <h2>Hello, I'm Ahmad Latif</h2>
             <h3>Web Developer & Designer</h3>
             <p>I create beautiful and functional websites that bring ideas to life.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
         </div>
         <div class="hero-image">
-            <img src="./img/profile.jpeg" alt="Ahmad Latif">
+            <img src="./img/profile.jpg" alt="Ahmad Latif">
         </div>
     </section>
 
@@ -54,6 +58,7 @@
                 <div class="about-text">
                     <p>I'm a passionate web developer with expertise in creating modern, responsive websites. With years of experience in front-end and back-end development, I specialize in turning complex problems into simple, beautiful designs.</p>
                     <p>My goal is to deliver high-quality solutions that not only meet client requirements but exceed expectations. I believe in continuous learning and staying up-to-date with the latest technologies.</p>
+                    <a href="./cv.pdf" class="btn-primary" target="_blank">Download My CV</a>
                     <div class="stats">
                         <div class="stat">
                             <h3>50+</h3>
@@ -69,8 +74,51 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="./img/profile.jpeg" alt="About Ahmad Latif">
+                <div class="about-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="nextSlide()">&#10095;</button>
+                        
+                        <div class="carousel-slide active">
+                            <img src="./img/Data_Analytic.jpg" alt="React Certification">
+                            <div class="certification-info">
+                                <h4>React Developer Certification</h4>
+                                <p>Meta (Facebook)</p>
+                                <span class="cert-date">2024</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/Data_Analytic.jpg" alt="JavaScript Certification">
+                            <div class="certification-info">
+                                <h4>JavaScript Developer</h4>
+                                <p>Mozilla Developer Network</p>
+                                <span class="cert-date">2023</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/Data_Analytic.jpg" alt="UI/UX Certification">
+                            <div class="certification-info">
+                                <h4>UI/UX Design Professional</h4>
+                                <p>Google UX Design</p>
+                                <span class="cert-date">2024</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/Data_Analytic.jpg" alt="Node.js Certification">
+                            <div class="certification-info">
+                                <h4>Node.js Developer</h4>
+                                <p>Linux Academy</p>
+                                <span class="cert-date">2023</span>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="goToSlide(0)"></span>
+                            <span class="indicator" onclick="goToSlide(1)"></span>
+                            <span class="indicator" onclick="goToSlide(2)"></span>
+                            <span class="indicator" onclick="goToSlide(3)"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -226,7 +274,7 @@
             <h2>My Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=E-commerce+Site" alt="E-commerce Website">
+                    <img src="./img/Data_Analytic.jpg" alt="E-commerce Website">
                     <div class="project-info">
                         <h3>E-commerce Website</h3>
                         <p>A full-stack e-commerce platform with modern UI/UX design, secure payment integration, and admin dashboard.</p>
@@ -243,7 +291,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Portfolio+Website" alt="Portfolio Website">
+                    <img src="./img/Data_Analytic.jpg" alt="Portfolio Website">
                     <div class="project-info">
                         <h3>Portfolio Website</h3>
                         <p>A responsive portfolio website showcasing creative work with smooth animations and modern design principles.</p>
@@ -259,23 +307,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Task+Manager+App" alt="Task Management App">
-                    <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A productivity app for managing daily tasks and projects with real-time collaboration features.</p>
-                        <div class="tools-used">
-                            <span>Tools:</span>
-                            <i class="fab fa-react"></i>
-                            <i class="fab fa-laravel"></i>
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-small">Live Demo</a>
-                            <a href="#" class="btn-small">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="projects.html" class="btn-primary">View All Projects</a>
             </div>
         </div>
     </section>
@@ -286,7 +320,7 @@
             <h2>My Blog</h2>
             <div class="blog-grid">
                 <div class="blog-card">
-                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=React+Guide" alt="Blog Post 1">
+                    <img src="./img/Data_Analytic.jpg" alt="Blog Post 1">
                     <div class="blog-info">
                         <div class="blog-meta">
                             <span class="date">December 10, 2025</span>
@@ -298,7 +332,7 @@
                     </div>
                 </div>
                 <div class="blog-card">
-                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=UI+UX+Design" alt="Blog Post 2">
+                    <img src="./img/Data_Analytic.jpg" alt="Blog Post 2">
                     <div class="blog-info">
                         <div class="blog-meta">
                             <span class="date">November 28, 2025</span>
@@ -309,18 +343,9 @@
                         <a href="#" class="btn-small">Read More</a>
                     </div>
                 </div>
-                <div class="blog-card">
-                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Laravel+Tutorial" alt="Blog Post 3">
-                    <div class="blog-info">
-                        <div class="blog-meta">
-                            <span class="date">November 15, 2025</span>
-                            <span class="category">Backend Development</span>
-                        </div>
-                        <h3>Getting Started with Laravel for PHP Developers</h3>
-                        <p>An introduction to Laravel, the PHP framework that makes web development faster and more enjoyable.</p>
-                        <a href="#" class="btn-small">Read More</a>
-                    </div>
-                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="blog.html" class="btn-primary">View All Blogs</a>
             </div>
         </div>
     </section>
@@ -344,9 +369,13 @@
                         <p>New York, NY</p>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/username" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://instagram.com/username" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/username" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://linkedin.com/in/username" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/username" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/username" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <form class="contact-form">
@@ -371,6 +400,11 @@
             <p>&copy; 2025 Ahmad Latif. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
